@@ -226,7 +226,7 @@ const sectionObserver = new IntersectionObserver(revealSection, {
 
 allSections.forEach(function (section) {
   sectionObserver.observe(section);
-  // section.classList.add('section--hidden');
+  section.classList.add('section--hidden');
 });
 
 // Lazy loading images
@@ -525,15 +525,15 @@ console.log(h1.parentElement.children); // siblings
 
 // DOMContentLoaded event does not wait for images and other external resources to load
 // Just HTML and JavaScript needs to be loaded
-document.addEventListener('DOMContentLoaded', function (e) {
-  // Script tag in vanilla js no need to wrap whole code in function
-  console.log('HTML parsed and DOM tree built!', e);
-});
+// document.addEventListener('DOMContentLoaded', function (e) {
+// Script tag in vanilla js no need to wrap whole code in function
+// console.log('HTML parsed and DOM tree built!', e);
+// });
 
 // All images and external files (when the complete page has loaded)
-window.addEventListener('load', function (e) {
-  console.log('Page fully loaded', e);
-});
+// window.addEventListener('load', function (e) {
+//   console.log('Page fully loaded', e);
+// });
 
 // window.addEventListener('beforeunload', function (e) {
 //   e.preventDefault();
